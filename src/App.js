@@ -13,7 +13,7 @@ function App() {
 
   function ifClicked() {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${locations}&APPID=9397e31b5fa4c523648f3d3392afc7e3&units=metric`
+      `http://api.openweathermap.org/data/2.5/weather?q=${locations}&APPID={APPID}3&units=metric`
     )
       .then((res) => {
         if (res.status===200) {
@@ -32,7 +32,7 @@ function App() {
       })
       .catch((error) => console.log(error));
     fetch(
-      `https://api.unsplash.com/search/photos?query=${locations}&client_id=IW_-kuhdE8MHfaLyeY-UjJdxnsm6BFd8BhdQnZlKpks`
+      `https://api.unsplash.com/search/photos?query=${locations}&client_id={AccessID}`
     )
       .then((res) => {
         if (res.ok) {
